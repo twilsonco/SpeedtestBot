@@ -8,6 +8,7 @@ This bot is adapted from [kkrypt0nn's bot template](https://github.com/kkrypt0nn
 * Pretty output using embeds
 * Example output:
 
+## Example image
 ![ex](https://github.com/twilsonco/SpeedtestBot/blob/master/ex.png)
 
 ## Install
