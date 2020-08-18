@@ -9,7 +9,7 @@ This bot is adapted from [kkrypt0nn's bot template](https://github.com/kkrypt0nn
 * Example output:
 
 ## Example image
-![ex](https://github.com/twilsonco/SpeedtestBot/blob/master/ex.png)
+![ex](https://github.com/twilsonco/SpeedtestBot/blob/master/ex-results.png)
 
 ## Install
 1. Get [Speedtest CLI](https://www.speedtest.net/apps/cli).
