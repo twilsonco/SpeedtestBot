@@ -16,7 +16,6 @@ This bot is adapted from [kkrypt0nn's bot template](https://github.com/kkrypt0nn
 2. Install python 3
 3. Clone this repository using `git clone https://github.com/twilsonco/SpeedtestBot`
 
-
 ## Configure
 1. Setup your new bot on Discord:
 	1. Sign up for a Discord [developer account](https://discord.com/developers/docs)
