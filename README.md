@@ -27,7 +27,7 @@ This bot is adapted from [kkrypt0nn's bot template](https://github.com/kkrypt0nn
 2. Invite the bot to your server
 	1. Go to `https://discordapp.com/api/oauth2/authorize?client_id=<client_id>&scope=bot&permissions=<permissions>`
 		* replace `<client_id>` with the `CLIENT ID` from above
-		* replace `<permissions>` with the minimum permissions `26624`(*for send messages, manage messages, embed links*) or administrator permissions `9` to keep things simple
+		* replace `<permissions>` with the minimum permissions `26624`(*for send messages, manage messages, embed links*) or administrator permissions `8` to keep things simple
 	2. Invite the bot to your server
 2. Configure `bot.py`
 	1. Set discord options
