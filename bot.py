@@ -155,11 +155,17 @@ async def test(context, *, content = ""):
 		if content == "":
 			await context.message.channel.send('Running speedtest on server (not on your local machine). Please wait...')
 			async with context.channel.typing():
-				st = json.loads(subprocess.check_output(SPEEDTEST_TEST).decode())
-				ts = datetime.datetime.now(tz=pytz.timezone('America/Denver'))
-				LASTSPEEDTEST = st
-				LASTSPEEDTESTTIMESTAMP = ts
-				await context.message.channel.send(embed=st_to_embed(st,ts))
+				st_raw = "no output: command not run"
+				try:
+					st_raw = subprocess.check_output(SPEEDTEST_TEST).decode()
+					st = json.loads(st_raw)
+					ts = datetime.datetime.now(tz=pytz.timezone('America/Denver'))
+					LASTSPEEDTEST = st
+					LASTSPEEDTESTTIMESTAMP = ts
+					await context.message.channel.send(embed=st_to_embed(st,ts))
+				except Exception as e:
+					print(f"Error encountered during speedtest: {e}\n\nRaw output of speedtest utility:\n{st_raw}")
+					await context.message.channel.send(f"Error encountered during speedtest: {e}\n\nRaw output of speedtest utility:\n{st_raw}")
 		elif content == "info":
 			testResult = subprocess.check_output(SPEEDTEST_VERSION)
 			for l in testResult.decode().split('\n'):
