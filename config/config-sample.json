@@ -1,0 +1,10 @@
+{
+  "report_rate_in_bits": true,
+  "bot_prefix": "s/",
+  "bot_token": "discord bot token",
+  "bot_owners": ["owner_id1", "owner_id2"],
+  "user_blacklist": ["user_id1", "user_id2"],
+  "user_whitelist": ["user_id1", "user_id2"],
+  "listen_for_commands_channel_ids": ["channel_id1", "channel_id2"],
+  "speedtest_cli_path": "/usr/bin/speedtest"
+}

@@ -1,0 +1,15 @@
+version: '3'
+services:
+  speedtestbot:
+    build: /volume1/docker/speedtestbot
+    container_name: speedtestbot
+    network_mode: synobridge  # Attach the service to the custom bridge network, see https://drfrankenstein.co.uk/step-3-setting-up-a-docker-bridge-network-in-container-manager/
+    environment:
+      - PUID=1057 #CHANGE_TO_YOUR_UID
+      - PGID=65543 #CHANGE_TO_YOUR_GID
+      - TZ=America/Denver #CHANGE_TO_YOUR_TZ
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /volume1/docker/speedtestbot/config:/config
+      - /volume1/docker/speedtestbot:/app
+    restart: unless-stopped
