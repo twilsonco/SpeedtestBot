@@ -41,7 +41,9 @@ SPEEDTEST_CLI_PATH = config.get('speedtest_cli_path', '/usr/bin/speedtest')
 SPEEDTEST_TEST = [SPEEDTEST_CLI_PATH, '-f', 'json']
 SPEEDTEST_VERSION = [SPEEDTEST_CLI_PATH, '--version']
 
-client = Bot(command_prefix=BOT_PREFIX)
+intents = discord.Intents.default()
+
+client = Bot(command_prefix=BOT_PREFIX, intents=intents)
 LASTSPEEDTEST = None
 LASTSPEEDTESTTIMESTAMP = None
 LOCKED = False
